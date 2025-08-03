@@ -128,9 +128,9 @@ function App() {
             <Typography className="about-text">
               Saya adalah seorang yang teliti dan memiliki rasa penasaran yang
               tinggi. Saya memiliki minat pada bidang programming terutama pada
-              bagian backend, saya juga memiliki minat terhadap IoT. Saya dapat
-              bekerja secara tim maupun secara individu. Saya juga dapat
-              beradaptasi dengan hal baru sehingga saya dapat diandalkan.
+              bagian Backend dan Game Developer. Saya dapat bekerja secara tim
+              maupun secara individu. Saya juga dapat beradaptasi dengan hal
+              baru sehingga saya dapat diandalkan.
             </Typography>
 
             <Typography className="contact-title">KONTAK ➜</Typography>
