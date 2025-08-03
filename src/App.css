@@ -1,38 +1,275 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap');
+
+body {
+  margin: 0;
+  background-color: #2D142C;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2,
+h3,
+.navbar-title,
+.name,
+.job-title,
+.about-title,
+.contact-title,
+.download-btn,
+.nav-btn,
+.section-title {
+  font-family: 'Press Start 2P', cursive !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
+  background-color: #510A32 !important;
+}
+
+.navbar-title {
+  flex-grow: 1;
+  font-size: 12px;
+  color: #EE4540;
+}
+
+/* Hero */
+.hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
+  border: 5px solid #EE4540;
+}
+
+.name {
+  font-size: 12px;
+  color: #EE4540;
+  margin-top: 10px;
+}
+
+.job-title {
+  font-size: 12px;
+  color: #C72C41;
+  margin: 10px 0;
+}
+
+.download-btn {
+  background-color: #C72C41 !important;
+  color: white !important;
+  font-size: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #EE4540 !important;
+  color: #2D142C !important;
+}
+
+/* About Section */
+.about-section {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-title {
+  font-size: 12px;
+  color: #C72C41;
+}
+
+.underline {
+  width: 200px;
+  height: 4px;
+  background-color: #EE4540;
+  margin: 8px 0 12px;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-title {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #EE4540;
+}
+
+.icon {
+  color: #EE4540 !important;
+  transition: color 0.3s ease;
+}
+
+/* Social Media Icons Hover Effects */
+.github-icon:hover .icon {
+  color: #ffffff !important;
+}
+
+.instagram-icon:hover .icon {
+  color: #e4405f !important;
+}
+
+.email-icon:hover .icon {
+  color: #ea4335 !important;
+}
+
+.social-icon {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #510A32;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background-color: #2D142C !important;
+  border: 3px solid #EE4540 !important;
+  color: white !important;
+  border-radius: 10px !important;
+  margin: 5px;
+  font-size: 12px;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #EE4540 !important;
+  color: #2D142C !important;
+}
+
+/* Different Background Colors for Sections */
+.skills-section {
+  background-color: #3A1B3A;
+}
+
+.experience-section {
+  background-color: #4A2148;
+}
+
+.portfolio-section {
+  background-color: #5A2756;
+}
+
+/* Skill Section */
+.skill-item {
+  border: 2px solid #EE4540;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Portfolio Cards - Fixed Height like Image 5 */
+.portfolio-card {
+  background-color: #2D142C !important;
+  border: 2px solid #EE4540 !important;
+  color: white !important;
+  height: 280px !important;
+  width: 100% !important;
+  border-radius: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.portfolio-card-content {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  padding: 20px !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+
+.portfolio-card-title {
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 12px !important;
+  color: #EE4540 !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  line-height: 1.4 !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.portfolio-card-desc {
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 14px !important;
+  color: white !important;
+  text-align: center !important;
+  line-height: 1.6 !important;
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 10px !important;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 12px;
+  color: #EE4540;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-card {
+    height: 250px !important;
+  }
+
+  .portfolio-card-title {
+    font-size: 10px !important;
+    height: 50px !important;
+  }
+
+  .portfolio-card-desc {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .portfolio-card {
+    max-width: 350px !important;
+    margin: 0 auto !important;
   }
 }
